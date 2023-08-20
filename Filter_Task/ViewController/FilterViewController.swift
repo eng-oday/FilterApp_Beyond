@@ -14,7 +14,9 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var filterCollectionView: UICollectionView!
     
-    var originalImage   = UIImage(named: "nature_Image")
+    var originalImage           = UIImage(named: "nature_Image")
+    lazy var image              = CIImage(cgImage: (mainImageView.image?.cgImage)!)
+    let context                 = CIContext(options: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
@@ -54,7 +56,7 @@ class FilterViewController: UIViewController {
 // MARK: - Collection View
 extension FilterViewController:UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Filters.filtersModel.count
+        return 5
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -66,12 +68,34 @@ extension FilterViewController:UICollectionViewDataSource,UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = filterCollectionView.dequeueReusableCell(withReuseIdentifier: Cell.filterCell, for: indexPath) as? FilterCollectionViewCell else {return UICollectionViewCell()}
-        cell.createTumbnails(originalImage: originalImage ?? UIImage(), filter: Filters.filtersModel[indexPath.row].filterName)
+        cell.createTumbnails(originalImage: originalImage ?? UIImage(), filter: Filters.allCases[indexPath.row])
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        mainImageView.image = originalImage?.addFilter(filter: Filters.filtersModel[indexPath.row].filterName)
-    }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var imageRef:CGImage?
+        if indexPath.row == 0 {
+             let filter = Filter1()
+            filter.inputImage = image
+             imageRef = context.createCGImage(filter.outputImage()!, from:image.extent)
+        }else if indexPath.row == 1{
+            let filter = Filter2()
+            filter.inputImage = image
+             imageRef = context.createCGImage(filter.outputImage()!, from:image.extent)
+        }else if indexPath.row == 2{
+            let filter = Filter3()
+            filter.inputImage = image
+            imageRef = context.createCGImage(filter.outputImage()!, from:image.extent)
+        }else if indexPath.row == 3{
+            let  filter = Filter4()
+            filter.inputImage = image
+             imageRef = context.createCGImage(filter.outputImage()!, from:image.extent)
+        }else if indexPath.row == 4{
+            let filter = Filter5()
+            filter.inputImage = image
+            imageRef = context.createCGImage(filter.outputImage()!, from:image.extent)
+        }
+        mainImageView.image = UIImage(cgImage: imageRef!)
+    }
 }

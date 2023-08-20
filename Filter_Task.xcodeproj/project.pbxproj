@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE600E8C2A92681A00A51190 /* CustomFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = CE600E8B2A92681A00A51190 /* CustomFilter.metal */; };
+		CE600E8F2A92684F00A51190 /* Filter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE600E8E2A92684F00A51190 /* Filter1.swift */; };
+		CE600E912A926A8700A51190 /* Filter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE600E902A926A8700A51190 /* Filter2.swift */; };
+		CE600E932A92717B00A51190 /* Filter3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE600E922A92717B00A51190 /* Filter3.swift */; };
+		CE600E952A92719300A51190 /* Filter4.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE600E942A92719300A51190 /* Filter4.swift */; };
+		CE600E972A9271A100A51190 /* Filter5.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE600E962A9271A100A51190 /* Filter5.swift */; };
 		F8BB35BA2A91EEB800720602 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BB35B92A91EEB800720602 /* AppDelegate.swift */; };
 		F8BB35BC2A91EEB800720602 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BB35BB2A91EEB800720602 /* SceneDelegate.swift */; };
 		F8BB35BE2A91EEB800720602 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BB35BD2A91EEB800720602 /* FilterViewController.swift */; };
@@ -17,10 +23,15 @@
 		F8F2906A2A91FA3400B590FC /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F290682A91FA3400B590FC /* FilterCollectionViewCell.swift */; };
 		F8F2906B2A91FA3400B590FC /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8F290692A91FA3400B590FC /* FilterCollectionViewCell.xib */; };
 		F8F290702A91FF5800B590FC /* Uiimage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F2906F2A91FF5800B590FC /* Uiimage+Ext.swift */; };
-		F8F290742A92053300B590FC /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F290732A92053300B590FC /* FilterModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE600E8B2A92681A00A51190 /* CustomFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CustomFilter.metal; sourceTree = "<group>"; };
+		CE600E8E2A92684F00A51190 /* Filter1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter1.swift; sourceTree = "<group>"; };
+		CE600E902A926A8700A51190 /* Filter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter2.swift; sourceTree = "<group>"; };
+		CE600E922A92717B00A51190 /* Filter3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter3.swift; sourceTree = "<group>"; };
+		CE600E942A92719300A51190 /* Filter4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter4.swift; sourceTree = "<group>"; };
+		CE600E962A9271A100A51190 /* Filter5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter5.swift; sourceTree = "<group>"; };
 		F8BB35B62A91EEB800720602 /* Filter_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filter_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BB35B92A91EEB800720602 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8BB35BB2A91EEB800720602 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +44,6 @@
 		F8F290682A91FA3400B590FC /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		F8F290692A91FA3400B590FC /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
 		F8F2906F2A91FF5800B590FC /* Uiimage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uiimage+Ext.swift"; sourceTree = "<group>"; };
-		F8F290732A92053300B590FC /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE600E8D2A92684400A51190 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				CE600E8E2A92684F00A51190 /* Filter1.swift */,
+				CE600E902A926A8700A51190 /* Filter2.swift */,
+				CE600E922A92717B00A51190 /* Filter3.swift */,
+				CE600E942A92719300A51190 /* Filter4.swift */,
+				CE600E962A9271A100A51190 /* Filter5.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
 		F8BB35AD2A91EEB800720602 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +99,7 @@
 				F8BB35C22A91EEBA00720602 /* Assets.xcassets */,
 				F8BB35C42A91EEBA00720602 /* LaunchScreen.storyboard */,
 				F8BB35C72A91EEBA00720602 /* Info.plist */,
+				CE600E8B2A92681A00A51190 /* CustomFilter.metal */,
 			);
 			path = Filter_Task;
 			sourceTree = "<group>";
@@ -117,7 +140,7 @@
 		F8F290722A92052900B590FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F8F290732A92053300B590FC /* FilterModel.swift */,
+				CE600E8D2A92684400A51190 /* Filters */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,11 +225,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE600E972A9271A100A51190 /* Filter5.swift in Sources */,
 				F8F2906A2A91FA3400B590FC /* FilterCollectionViewCell.swift in Sources */,
 				F8F290702A91FF5800B590FC /* Uiimage+Ext.swift in Sources */,
-				F8F290742A92053300B590FC /* FilterModel.swift in Sources */,
+				CE600E932A92717B00A51190 /* Filter3.swift in Sources */,
 				F8BB35BE2A91EEB800720602 /* FilterViewController.swift in Sources */,
+				CE600E8C2A92681A00A51190 /* CustomFilter.metal in Sources */,
+				CE600E952A92719300A51190 /* Filter4.swift in Sources */,
 				F8BB35BA2A91EEB800720602 /* AppDelegate.swift in Sources */,
+				CE600E912A926A8700A51190 /* Filter2.swift in Sources */,
+				CE600E8F2A92684F00A51190 /* Filter1.swift in Sources */,
 				F8BB35D32A91F2F200720602 /* Constant.swift in Sources */,
 				F8BB35BC2A91EEB800720602 /* SceneDelegate.swift in Sources */,
 			);
@@ -363,11 +391,14 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MTLLINKER_FLAGS = "-cikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
 				PRODUCT_BUNDLE_IDENTIFIER = "Swift.oday.Filter-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -391,11 +422,14 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MTLLINKER_FLAGS = "-cikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
 				PRODUCT_BUNDLE_IDENTIFIER = "Swift.oday.Filter-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

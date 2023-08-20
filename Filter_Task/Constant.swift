@@ -12,16 +12,12 @@ enum Cell {
     static let filterCell = "FilterCollectionViewCell"
 }
 
-enum Filters {
-    static let filtersModel:[FilterModel] = [FilterModel(filterName: "CIPhotoEffectChrome") ,
-                                        FilterModel(filterName: "CIPhotoEffectFade"),
-                                        FilterModel(filterName: "CIPhotoEffectInstant"),
-                                        FilterModel(filterName: "CIPhotoEffectMono"),
-                                        FilterModel(filterName: "CIPhotoEffectNoir"),
-                                        FilterModel(filterName: "CIPhotoEffectProcess"),
-                                        FilterModel(filterName: "CIPhotoEffectTonal"),
-                                        FilterModel(filterName: "CIPhotoEffectTransfer")
-           ]
+enum Filters:CaseIterable{
+    case Filter1
+    case Filter2
+    case Filter3
+    case Filter4
+    case Filter5
 }
 
 
